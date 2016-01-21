@@ -63,6 +63,21 @@
 -- EDIT THE FOLLOWING SQL --
 -- ====================== --
 
-SELECT first_name FROM employees;
+-- SELECT first_name FROM employees;
+-- my query
+SELECT first_name, name FROM employees
+LEFT OUTER JOIN stores ON stores.id = employees.store_id;
 
+-- first_name            name      
+-- --------------------  ----------
+-- Linda                 Muskoka   
+-- Mark                  Muskoka   
+-- Topi                  Muskoka   
+-- Rebecca               Victoria  
+-- Jane                  Victoria  
+-- Robin                 Victoria  
+-- Galinda               Victoria  
+-- Tracey                Victoria  
+-- Gordon                          
+-- Bart  
 

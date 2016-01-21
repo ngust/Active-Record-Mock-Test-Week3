@@ -58,6 +58,15 @@
 -- EDIT THE FOLLOWING SQL --
 -- ====================== --
 
-SELECT name FROM  stores;
+-- SELECT name FROM  stores;
+
+SELECT name, ROUND(AVG(hourly_rate),2) AS average_hourly_rate FROM stores
+  INNER JOIN employees ON stores.id = employees.store_id
+  GROUP BY name;
+
+--   name             average_hourly_rate
+-- ---------------  -------------------
+-- Muskoka          14.67              
+-- Victoria         16.0 
 
 
